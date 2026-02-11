@@ -132,25 +132,22 @@
       bottom:18px;
       display:flex;
       flex-direction:column;
-      align-items:flex-end;
+      align-items:center;
       gap:8px;
       color:#dff7ff;
-        align-items:center;
-        gap:8px;
-        padding:6px 10px;
-        background: linear-gradient(180deg, rgba(255,255,255,0.01), transparent);
-        border-radius:8px;
-      }
+      padding:6px 10px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.01), transparent);
+      border-radius:8px;
+    }
     .brand-right img{ width:62px; height:auto; filter:drop-shadow(0 6px 18px rgba(0,0,0,0.6)) }
     
-    .brand-right a{ display:inline-flex; align-items:center; gap:8px; color:var(--accent); text-decoration:none }
-      .brand-right a{ display:inline-flex; align-items:center; justify-content:center; gap:10px; color:var(--accent); text-decoration:none; padding:6px; border-radius:6px }
-      .brand-right svg{ width:24px; height:24px; display:block; color:inherit; }
-      .socials{ display:flex; gap:12px; align-items:center }
-      .brand-right .contact-label{ color:var(--accent); font-weight:800; font-size:15px; margin:0; padding-bottom:4px; text-align:center }
-    .brand-right .contact-label{ color:var(--accent); font-weight:700; font-size:14px; margin-right:8px }
-    .socials{ display:flex; gap:8px; align-items:center }
-       .socials .social-btn{
+    .brand-right a{ display:inline-flex; align-items:center; justify-content:center; gap:10px; color:var(--accent); text-decoration:none; padding:6px; border-radius:6px; transition:all 0.2s ease }
+    .brand-right a:hover{ background:rgba(63,224,255,0.1) }
+    .brand-right svg{ width:24px; height:24px; display:block; color:inherit; }
+    .socials{ display:flex; gap:12px; align-items:center }
+    .brand-right .contact-label{ color:var(--accent); font-weight:800; font-size:15px; margin:0; padding-bottom:4px; text-align:center }
+    
+    .socials .social-btn{
       position:absolute;
       inset:0;
       background-image:
@@ -163,8 +160,30 @@
     @media (max-width:880px){
       .card{flex-direction:column; align-items:stretch}
       .hero-left{width:100%; clip-path:none; border-bottom:1px solid rgba(255,255,255,0.03)}
-      .hero-right{width:100%}
-      .brand-right{position:static; margin-top:6px}
+      .hero-right{width:100%; padding:30px 24px}
+      .brand-right{position:relative; margin-top:20px; right:auto; bottom:auto; padding:12px 0; background:transparent; justify-content:center}
+      h1{font-size:22px}
+      p.lead{font-size:14px}
+      .cta-row{flex-direction:column; gap:8px}
+      .btn{width:100%}
+      .pill{font-size:12px; padding:6px 10px}
+      .brand-right .contact-label{font-size:13px; padding-bottom:6px}
+      .brand-right svg{width:20px; height:20px}
+    }
+    @media (max-width:480px){
+      body{padding:20px}
+      .card{border-radius:10px}
+      .hero-right{padding:20px 16px}
+      h1{font-size:18px; line-height:1.2}
+      p.lead{font-size:13px}
+      .features{gap:8px}
+      .pill{font-size:11px; padding:5px 8px}
+      .btn{padding:10px 14px; font-size:13px}
+      .brand-right{gap:6px; padding:8px 0}
+      .brand-right .contact-label{font-size:12px; padding-bottom:4px}
+      .socials{gap:10px}
+      .brand-right svg{width:18px; height:18px}
+      .terms a{font-size:12px}
     }
 
     .footer-section{
