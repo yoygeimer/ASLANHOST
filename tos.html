@@ -1,0 +1,618 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Términos y Condiciones - AslanHost</title>
+  <style>
+    :root{
+      --bg1:#2b0450; /* deep purple */
+      --bg2:#4b167f; /* purple */
+      --accent:#00d1ff; /* cyan */
+      --card-grad: linear-gradient(135deg,#2e0e5a 0%, #4b167f 45%, #6a2ee8 100%);
+      --muted: rgba(255,255,255,0.85);
+      --glass: rgba(255,255,255,0.03);
+    }
+    html,body{margin:0;padding:0;}
+    body{
+      margin:0;
+      font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      background: radial-gradient(1200px 500px at 10% 10%, rgba(120,60,200,0.12), transparent 10%),
+                  radial-gradient(800px 300px at 90% 90%, rgba(0,200,255,0.06), transparent 10%),
+                  linear-gradient(180deg,#0b0120 0%, #1a0833 50%, #2b0450 100%);
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      padding:20px 30px;
+      color:var(--muted);
+    }
+    .card{
+      width:100%;
+      max-width:1200px;
+      background: transparent;
+      border-radius:0;
+      padding:0;
+      display:flex;
+      flex-direction:column;
+      gap:40px;
+      box-shadow: none;
+      backdrop-filter: none;
+    }
+    .left{
+      width:100%;
+      min-width:auto;
+      background:var(--card-grad);
+      border-radius:14px;
+      position:relative;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:30px 36px;
+      overflow:hidden;
+      clip-path: none;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+    }
+    .logo-wrap{
+      width:180px;
+      height:180px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border-radius:8px;
+      box-shadow: 0 6px 24px rgba(0,0,0,0.45), inset 0 2px 10px rgba(255,255,255,0.03);
+      flex-shrink:0;
+      overflow:hidden;
+    }
+    .logo-wrap img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+    .right{
+      width:100%;
+      padding:0;
+      display:flex;
+      flex-direction:column;
+      gap:40px;
+    }
+    h1{
+      margin:0;
+      font-size:28px;
+      line-height:1.1;
+      color:#ffffff;
+      letter-spacing:-0.2px;
+    }
+    h1 .accent{color:var(--accent);}
+    p.lead{
+      margin:4px 0 0 0;
+      color:rgba(255,255,255,0.85);
+      max-width:100%;
+      font-size:14px;
+    }
+    .badges{display:flex;gap:8px;margin-top:8px;flex-wrap:wrap}
+    .badge{background:rgba(255,255,255,0.03);padding:6px 12px;border-radius:999px;color:rgba(255,255,255,0.8);font-size:13px;border:1px solid rgba(255,255,255,0.03)}
+    .actions{display:flex;gap:10px;margin-top:10px}
+    .btn{
+      padding:10px 16px;border-radius:8px;border:none;cursor:pointer;font-weight:600;font-size:14px;color:#fff;background:linear-gradient(180deg,var(--accent),#00a9d6);
+      box-shadow:0 8px 20px rgba(0,209,255,0.12);
+    }
+    .btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.08);color:rgba(255,255,255,0.9)}
+    .terms{
+      margin-top:0;background:linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.01));
+      padding:24px;border-radius:12px;overflow:visible;border:1px solid rgba(255,255,255,0.05);
+      color:rgba(255,255,255,0.92);font-size:14px;line-height:1.6;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+    }
+    .terms h2{color:#fff;margin:0 0 6px 0;font-size:22px;font-weight:700;text-align:center}
+    .terms .muted{text-align:center}
+    .terms h3{color:#00d1ff;margin:12px 0 6px 0;font-size:14px;font-weight:600}
+    .terms p{color:rgba(255,255,255,0.9);margin:4px 0}
+    .terms ul{margin:4px 0;padding-left:18px;color:rgba(255,255,255,0.88)}
+    .terms li{margin:2px 0}
+    .muted{color:rgba(255,255,255,0.72);font-size:14px}
+    footer.copy{display:flex;justify-content:flex-end;gap:12px;margin-top:12px;color:rgba(255,255,255,0.6)}
+    @media (max-width:900px){
+      .card{flex-direction:column;padding:0}
+      .left,.right{width:100%}
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="left" aria-hidden="true">
+      <div class="logo-wrap">
+        <img src="https://i.postimg.cc/jdbKMV2b/9e6cc93f-3af1-4528-baa0-8a0c3e4fcaf8-removalai-preview.png" alt="AslanHost Logo" width="180" height="180">
+      </div>
+    </div>
+    <div class="right">
+
+      <div class="terms" role="region" aria-label="Términos y Condiciones">
+        <h2>Términos y Condiciones</h2>
+        <p class="muted">Última actualización: 10 de febrero de 2026</p>
+        <p>Por favor, lea atentamente estos términos y condiciones antes de utilizar los servicios de AslanHost. El uso de nuestros servicios implica la aceptación completa de estos términos.</p>
+
+        <h3>1. Aceptación de Términos y Formalización del Contrato</h3>
+        <p>El uso, acceso, registro o utilización de cualquier servicio proporcionado por AslanHost Hosting (en adelante, "AslanHost", "nosotros" o "la Empresa") implica que aceptas total y voluntariamente estos Términos y Condiciones de Uso, así como nuestra Política de Privacidad.</p>
+        <p>Este documento constituye un acuerdo legal vinculante que regula la relación contractual entre el usuario (en adelante, "tú", "el cliente" o "el usuario") y AslanHost.</p>
+        <p><strong>Tu responsabilidad:</strong> Al utilizar nuestros servicios, declaras que:</p>
+        <ul>
+          <li>Tienes la capacidad legal para contratar estos servicios</li>
+          <li>Cumplirás con todas las obligaciones aquí establecidas</li>
+        </ul>
+        <p><strong>Importante:</strong> El hecho de no leer, no entender o no estar de acuerdo con estos términos no te exime de su cumplimiento. Si no estás de acuerdo con alguna parte de estos términos, debes abstenerte de utilizar nuestros servicios y cancelar cualquier servicio activo de inmediato.</p>
+        <p><strong>Modificaciones:</strong> AslanHost se reserva el derecho de modificar estos términos y condiciones en cualquier momento sin previo aviso. Las modificaciones entrarán en vigor desde su publicación en nuestro sitio web oficial. El uso continuado de los servicios después de dichas modificaciones constituirá tu aceptación de los nuevos términos.</p>
+
+        <h3>2. Descripción de los Servicios</h3>
+        <p>AslanHost ofrece servicios de infraestructura tecnológica que incluyen:</p>
+        <p><strong>Nuestros Servicios:</strong></p>
+        <ul>
+          <li><strong>Game Servers:</strong> Servidores especializados para alojamiento de juegos en línea, incluyendo pero no limitado a Minecraft y otros juegos populares</li>
+          <li><strong>Servicios de Hosting:</strong> Alojamiento web y servicios relacionados</li>
+          <li><strong>Ubicación de Servidores:</strong> La infraestructura física de los servidores se encuentra ubicada en centros de datos (datacenters) en diversas ubicaciones geográficas.</li>
+        </ul>
+        <p>El usuario reconoce y acepta esta infraestructura, comprendiendo las implicaciones que esto pueda tener en términos de:</p>
+        <ul>
+          <li>Latencia</li>
+          <li>Velocidad de conexión</li>
+          <li>Jurisdicción aplicable a los datos almacenados</li>
+        </ul>
+        <p><strong>Disponibilidad del Servicio:</strong> AslanHost no garantiza que los servicios sean 100% ininterrumpidos o libres de errores. Realizamos mantenimientos programados y no programados para garantizar la calidad y seguridad del servicio.</p>
+
+        <h3>3. Precios, Pagos y Conversión de Moneda</h3>
+        <p><strong>a)</strong> Moneda Base: Todos los precios de los servicios se expresan en Dólares Americanos (USD).</p>
+        <p><strong>b)</strong> Conversión de Moneda: AslanHost puede mostrar precios en otras monedas a efectos informativos. La conversión se realizará utilizando tipos de cambio determinados exclusivamente por AslanHost, los cuales pueden variar sin previo aviso.</p>
+        <p><strong>c)</strong> AslanHost no se responsabiliza por diferencias en las tasas de cambio aplicadas por entidades bancarias o procesadores de pago.</p>
+        <p><strong>d)</strong> Métodos de Pago: AslanHost acepta diversos métodos de pago, los cuales pueden variar según la disponibilidad. El uso de determinados métodos de pago puede conllevar comisiones adicionales o restricciones específicas.</p>
+        <p><strong>e)</strong> Pagos Definitivos: Una vez realizado el pago y activado el servicio, la transacción se considera definitiva. El consumo de recursos comienza inmediatamente, por lo que no se aceptarán cancelaciones o solicitudes de devolución una vez que el servicio ha sido activado.</p>
+
+        <h3>4. Registro de Cuenta y Seguridad</h3>
+        <p><strong>a) Información Veraz:</strong> El usuario se compromete a proporcionar información veraz, precisa y completa al registrarse. AslanHost se reserva el derecho de suspender o cancelar cuentas que contengan información falsa o engañosa.</p>
+        <p><strong>b) Responsabilidad del Usuario:</strong> El usuario es el único y exclusivo responsable de mantener la confidencialidad de sus datos de acceso (contraseñas, claves API, tokens, etc.). Cualquier acción realizada con tu cuenta será atribuida directamente a ti.</p>
+        <p><strong>c) Seguridad de la Cuenta:</strong> Es obligación del usuario implementar medidas de seguridad adecuadas, incluyendo:</p>
+        <ul>
+          <li>Contraseñas robustas</li>
+          <li>Autenticación de dos factores (2FA) cuando esté disponible</li>
+        </ul>
+        <p>AslanHost no se hace responsable del uso no autorizado de tu cuenta debido a negligencia en la seguridad.</p>
+        <p><strong>d) Notificación de Acceso No Autorizado:</strong> En caso de detectar cualquier acceso no autorizado o sospecha de comprometimiento de seguridad, el usuario debe notificar a AslanHost inmediatamente a través de los canales de soporte correspondientes.</p>
+        <p><strong>e) Uso de la Cuenta:</strong> La cuenta es personal e intransferible. No se permite compartir credenciales de acceso entre múltiples personas sin autorización explícita de AslanHost.</p>
+
+        <h3>5. Obligaciones y Responsabilidades del Usuario</h3>
+        <p>El usuario se compromete a utilizar los servicios de AslanHost de manera legal, ética y responsable. El usuario garantiza que:</p>
+        <p><strong>a) Contenido Legal:</strong> Todo el contenido alojado, transmitido o procesado a través de nuestros servicios cumple con todas las leyes y regulaciones aplicables, incluyendo pero no limitado a:</p>
+        <ul>
+          <li>Leyes de propiedad intelectual</li>
+          <li>Derechos de autor</li>
+          <li>Marcas registradas</li>
+          <li>Cualquier otra legislación relevante</li>
+        </ul>
+        <p><strong>b) No Almacenamiento de Contenido Ilegal:</strong> No alojará contenido que incluya, entre otros:</p>
+        <ul>
+          <li>Material pornográfico infantil o contenido sexual ilegal</li>
+          <li>Programas maliciosos, virus, troyanos, ransomware o malware</li>
+          <li>Herramientas de hacking o cracking no autorizadas</li>
+          <li>Contenido que promueva el terrorismo, la violencia o el odio</li>
+          <li>Contenido que viole derechos de terceros</li>
+        </ul>
+        <p><strong>c) Respeto a la Ley:</strong> No utilizará los servicios para actividades ilegales, incluyendo pero no limitado a:</p>
+        <ul>
+          <li>Fraude</li>
+          <li>Estafas (phishing)</li>
+          <li>Spam</li>
+          <li>Scams</li>
+          <li>Cualquier otra actividad criminal</li>
+        </ul>
+        <p><strong>d) Uso Razonable de Recursos:</strong> Utilizará los recursos asignados de manera razonable sin afectar el rendimiento de otros usuarios o la estabilidad de la infraestructura de AslanHost.</p>
+        <p><strong>e) Respaldo de Datos:</strong> Es responsabilidad exclusiva del usuario realizar copias de seguridad (backups) de sus datos importantes. AslanHost ofrece servicios de backup como cortesía, pero no garantiza su integridad o disponibilidad.</p>
+
+        <h3>6. Actividades Prohibidas</h3>
+        <p>Queda estrictamente prohibido utilizar los servicios de AslanHost para las siguientes actividades:</p>
+        <p><strong>a) Ataques Cibernéticos:</strong></p>
+        <ul>
+          <li>Ataques de denegación de servicio (DoS/DDoS) contra terceros</li>
+          <li>Escaneo de puertos no autorizado</li>
+          <li>Intentos de intrusión en sistemas ajenos</li>
+          <li>Explotación de vulnerabilidades de seguridad</li>
+        </ul>
+        <p><strong>b) Distribución de Malware:</strong></p>
+        <ul>
+          <li>Alojar, distribuir o facilitar el acceso a software malicioso</li>
+          <li>Crear botnets o participar en redes de comandos y control (C&C)</li>
+        </ul>
+        <p><strong>c) Violación de Propiedad Intelectual:</strong></p>
+        <ul>
+          <li>Alojar contenido que viole derechos de autor, marcas o patentes</li>
+          <li>Distribuir software pirata, cracks o keygens sin autorización</li>
+        </ul>
+        <p><strong>d) Actividades fraudulentas:</strong></p>
+        <ul>
+          <li>Sitios de phishing o suplantación de identidad</li>
+          <li>Esquemas piramidales, fraudes financieros o estafas</li>
+          <li>Comercio de productos o servicios ilegales</li>
+        </ul>
+        <p><strong>e) Abuso de Recursos:</strong></p>
+        <ul>
+          <li>Minería de criptomonedas sin autorización explícita de AslanHost</li>
+          <li>Consumo excesivo de CPU, RAM, disco o ancho de banda</li>
+          <li>Uso del servicio como punto de partida para ataques</li>
+        </ul>
+        <p><strong>f) Evasión de Restricciones:</strong></p>
+        <ul>
+          <li>Intentar evadir límites técnicos o cuotas de recursos</li>
+          <li>Utilizar técnicas para ocultar el uso real de recursos</li>
+          <li>Modificar la configuración del sistema sin autorización</li>
+        </ul>
+        <p><strong>Consecuencias:</strong> La detección de cualquiera de estas actividades dará lugar a la suspensión inmediata de los servicios sin derecho a reembolso.</p>
+
+        <h3>7. Política de Uso Aceptable (AUP) para Game Servers</h3>
+        <p>Para servidores de juegos específicamente, se aplican las siguientes reglas adicionales:</p>
+        <p><strong>a) Configuración del Servidor:</strong> El usuario es responsable de configurar correctamente su servidor de juego, incluyendo pero no limitado a:</p>
+        <ul>
+          <li>Ajustes de RAM</li>
+          <li>Límites de jugadores</li>
+          <li>Plugins</li>
+          <li>Mods</li>
+        </ul>
+        <p><strong>b) Mods y Plugins:</strong> Solo se permite el uso de mods y plugins de fuentes confiables y legítimas. AslanHost no se responsabiliza por daños causados por mods maliciosos o corruptos.</p>
+        <p><strong>c) Comunidad de Jugadores:</strong> El usuario es responsable de moderar su servidor y garantizar que los jugadores cumplan con:</p>
+        <ul>
+          <li>Las reglas del juego</li>
+          <li>Las leyes aplicables</li>
+        </ul>
+        <p><strong>d) Limitaciones Técnicas:</strong> El usuario debe respetar los límites técnicos asignados. Intentar superar estos límites puede resultar en:</p>
+        <ul>
+          <li>Suspensiones temporales</li>
+          <li>Suspensiones permanentes</li>
+        </ul>
+        <p><strong>e) Soporte de Juegos:</strong> AslanHost proporciona soporte para la infraestructura del servidor, pero no para:</p>
+        <ul>
+          <li>Configuración específica de juegos</li>
+          <li>Plugins o mods</li>
+        </ul>
+        <p>Salvo en casos de errores directamente causados por nuestra infraestructura.</p>
+
+        <h3>8. Propiedad del Servicio y Transferencias</h3>
+        <p><strong>a) Titularidad del Servicio:</strong> El contrato de servicio se establece únicamente con la persona o entidad dueña de la cuenta registrada en la plataforma de AslanHost.</p>
+        <p><strong>b) Pagos por Terceros:</strong> Los pagos realizados por terceros (amigos, familiares, etc.) NO otorgan ningún derecho de propiedad, control o reembolso a dichos terceros. El dueño de la cuenta registrado es el único con derechos sobre el servicio.</p>
+        <p><strong>c) Transferencia de Cuenta:</strong> Para transferir la titularidad de una cuenta y sus servicios asociados a otra persona, se requiere:</p>
+        <ul>
+          <li>Solicitud formal del titular actual mediante ticket de soporte</li>
+          <li>Verificación de identidad del titular actual</li>
+          <li>Validación del nuevo titular</li>
+          <li>Aprobación de AslanHost</li>
+        </ul>
+        <p>La transferencia puede conllevar comisiones administrativas. AslanHost se reserva el derecho de aprobar o denegar transferencias.</p>
+        <p><strong>d) Acuerdos Privados:</strong> AslanHost no reconoce ni se hace responsable de acuerdos de pago o servicios entre usuarios. Cualquier disputa entre usuarios debe resolverse entre las partes involucradas.</p>
+
+        <h3>9. Disputas de Pago y Contracargos</h3>
+        <p><strong>a) Prohibición de Contracargos Sin Previo Contacto:</strong> Queda estrictamente prohibido realizar disputas de pago (contracargos, chargebacks) sin antes haber contactado al equipo de facturación de AslanHost y haber intentado resolver el problema.</p>
+        <p><strong>b) Procedimiento de Queja:</strong> Si tienes algún problema con el servicio o el pago, DEBES:</p>
+        <ol>
+          <li>Abrir un ticket de soporte describiendo el problema</li>
+          <li>Esperar la respuesta de nuestro equipo</li>
+          <li>Colaborar con la resolución del problema</li>
+          <li>Agotar todas las vías de solución internas</li>
+        </ol>
+        <p><strong>c) Consecuencias de Contracargos No Autorizados:</strong> Si realizas un contracargo sin previa comunicación con AslanHost o después de que el problema haya sido resuelto:</p>
+        <ul>
+          <li>Tu cuenta y todos los servicios serán suspendidos inmediatamente</li>
+          <li>Tus datos serán eliminados permanentemente</li>
+          <li>Serás añadido a nuestra lista negra (blacklist)</li>
+          <li>No podrás volver a contratar servicios con AslanHost</li>
+          <li>AslanHost se reserva el derecho de tomar acciones legales</li>
+        </ul>
+        <p><strong>d) Recuperación de Fondos:</strong> En caso de contracargo injustificado, AslanHost utilizará cualquier saldo disponible para cubrir gastos administrativos y daños ocasionados.</p>
+
+        <h3>10. Política de Reembolsos</h3>
+        <p>AslanHost mantiene una política estricta de reembolsos debido a la naturaleza inmediata del consumo de recursos técnicos.</p>
+        <p><strong>a) Ventana de Reembolso:</strong> Solo se aceptarán solicitudes de reembolso dentro de las primeras 10 horas después de la compra y activación del servicio. Consideramos que este tiempo es suficiente para probar si el servicio funciona correctamente en tu caso.</p>
+        <p><strong>b) Condiciones para Reembolso:</strong> Se considerarán reembolsos SOLO bajo las siguientes circunstancias:</p>
+        <ul>
+          <li>Error Técnico Crítico: Problemas técnicos graves que impidan completamente el uso del servicio y que sean responsabilidad directa de AslanHost</li>
+          <li>Fallo de Infraestructura: Fallas en nuestra infraestructura que hagan el servicio inutilizable</li>
+        </ul>
+        <p><strong>c) Documentación Requerida:</strong> Para solicitar un reembolso, el usuario DEBE proporcionar:</p>
+        <ul>
+          <li>Capturas de pantalla evidenciando el problema</li>
+          <li>Registros de error (logs) cuando sean aplicables</li>
+          <li>Descripción detallada del incidente</li>
+          <li>Colaboración con el equipo de soporte para diagnóstico</li>
+        </ul>
+        <p><strong>d) Casos No Elegibles para Reembolso:</strong> NO se otorgarán reembolsos por:</p>
+        <ul>
+          <li>Problemas de conexión a internet del usuario</li>
+          <li>Configuración incorrecta del servicio por parte del usuario</li>
+          <li>Instalación de software o mods no compatibles</li>
+          <li>Falta de conocimiento técnico del usuario</li>
+          <li>Cambio de opinión</li>
+          <li>Incumplimiento de los términos de servicio por parte del usuario</li>
+          <li>Problemas causados por uso excesivo de recursos</li>
+        </ul>
+        <p><strong>e) Proceso de Reembolso:</strong> Las solicitudes aprobadas pueden tardar hasta 30 días en procesarse. Los reembolsos se realizarán mediante el mismo método de pago original, sujeto a políticas de procesadores de pago.</p>
+        <p><strong>f) Servicios Gratuitos o Promocionales:</strong> Los servicios gratuitos, pruebas gratuitas o promociones especiales no tienen derecho a reembolso.</p>
+        <p><strong>g) Prórrogas:</strong> Como alternativa al reembolso, AslanHost puede ofrecer extensiones de servicio (prórrogas) según las circunstancias del caso.</p>
+
+        <h3>11. Vencimiento, Suspensión y Terminación</h3>
+        <p><strong>a) Vencimiento de Pagos:</strong> Los servicios tienen una fecha de vencimiento definida al momento de la compra.</p>
+        <p><strong>b) Gracia de Pago:</strong> Una vez vencido el servicio, el usuario dispone de un período de gracia de 5 días para realizar el pago sin pérdida de datos.</p>
+        <p><strong>c) Suspensión Temporal:</strong> Del día 6 al día 7 después del vencimiento, el servicio estará suspendido temporalmente.</p>
+        <ul>
+          <li>Los datos se conservan</li>
+          <li>Pero el servicio no está accesible</li>
+        </ul>
+        <p><strong>d) Eliminación de Datos:</strong> A partir del día 8 después del vencimiento, AslanHost se reserva el derecho de eliminar permanentemente todos los datos, configuraciones y contenidos del usuario para liberar recursos en nuestros servidores.</p>
+        <p><strong>e) Notificaciones:</strong> AslanHost se esforzará por enviar notificaciones sobre vencimientos, pero no se responsabiliza por:</p>
+        <ul>
+          <li>Entregas fallidas de correos electrónicos</li>
+          <li>Problemas en la notificación</li>
+        </ul>
+        <p>Es responsabilidad del usuario monitorear la fecha de vencimiento de sus servicios.</p>
+        <p><strong>f) Recuperación Post-Eliminación:</strong> Una vez eliminados los datos, AslanHost no garantiza su recuperación. Se recomienda mantener copias de seguridad externas.</p>
+
+        <h3>12. Terminación por Incumplimiento</h3>
+        <p>AslanHost se reserva el derecho de suspender o terminar unilateralmente el servicio y eliminar la cuenta del usuario en caso de:</p>
+        <p><strong>Motivos de Terminación:</strong></p>
+        <ul>
+          <li>Violación de cualquiera de los términos y condiciones establecidos en este documento</li>
+          <li>Uso del servicio para actividades ilegales o fraudulentas</li>
+          <li>Daño intencional o negligente a la infraestructura de AslanHost</li>
+          <li>Ataques o amenazas contra AslanHost o su personal</li>
+          <li>Falta de pago después del período de gracia establecido</li>
+          <li>Proporcionar información falsa o engañosa durante el registro</li>
+          <li>Intentos de evadir o burlar las medidas de seguridad de AslanHost</li>
+          <li>Comportamiento abusivo hacia el equipo de soporte</li>
+        </ul>
+        <p><strong>Consecuencias de Terminación:</strong> En caso de terminación por incumplimiento:</p>
+        <ul>
+          <li>No habrá derecho a reembolso de ninguna naturaleza</li>
+          <li>Los datos del usuario pueden ser eliminados inmediatamente</li>
+          <li>AslanHost no garantiza la recuperación de copias de seguridad</li>
+          <li>El usuario puede ser añadido a listas negras</li>
+        </ul>
+        <p><strong>Notificación:</strong> AslanHost notificará al usuario sobre la terminación cuando sea posible, pero se reserva el derecho de tomar acciones inmediatas cuando la situación así lo requiera.</p>
+
+        <h3>13. Mantenimiento del Servicio</h3>
+        <p>AslanHost realizará mantenimientos programados y no programados para garantizar la calidad, seguridad y rendimiento de los servicios.</p>
+        <p><strong>a) Mantenimientos Programados:</strong> Se notificarán con al menos 24 horas de antelación cuando sea posible. Estos pueden incluir:</p>
+        <ul>
+          <li>Actualizaciones de hardware</li>
+          <li>Actualizaciones de software</li>
+          <li>Parches de seguridad</li>
+          <li>Mejoras de infraestructura</li>
+        </ul>
+        <p><strong>b) Mantenimientos de Emergencia:</strong> Pueden realizarse sin previo aviso en situaciones críticas que afecten la seguridad o estabilidad del servicio.</p>
+        <p><strong>c) Tiempo de Inactividad:</strong> Los mantenimientos pueden causar interrupciones temporales del servicio. AslanHost no será responsable por pérdidas o daños causados durante estos periodos.</p>
+        <p><strong>d) Actualizaciones de Software:</strong> AslanHost puede actualizar:</p>
+        <ul>
+          <li>El sistema operativo</li>
+          <li>Paneles de control</li>
+          <li>Otros software componentes</li>
+        </ul>
+        <p>Sin previo aviso.</p>
+        <p><strong>Aceptación:</strong> El usuario reconoce que el uso continuo del servicio implica la aceptación de estos mantenimientos como parte necesaria de la operación del servicio.</p>
+
+        <h3>14. Respaldo de Datos y Recuperación</h3>
+        <p><strong>a) Responsabilidad del Usuario:</strong> El usuario es el único y exclusivo responsable de mantener copias de seguridad (backups) de todos sus datos importantes.</p>
+        <p><strong>b) Servicio de Backup:</strong> AslanHost puede ofrecer servicios automatizados de backup como cortesía, pero:</p>
+        <ul>
+          <li>No garantiza la integridad o disponibilidad de estos backups</li>
+          <li>No ofrece SLA específico para backups</li>
+          <li>Puede modificar o eliminar el servicio de backup sin previo aviso</li>
+          <li>No se hace responsable por pérdidas de datos</li>
+        </ul>
+        <p><strong>c) Recuperación de Datos:</strong> En caso de pérdida de datos, AslanHost intentará recuperar la información disponible, pero:</p>
+        <ul>
+          <li>No garantiza el éxito de la recuperación</li>
+          <li>Puede cobrar tarifas adicionales por servicios de recuperación de datos</li>
+          <li>No será responsable por datos no recuperables</li>
+        </ul>
+        <p><strong>d) Eliminación Intencional:</strong> AslanHost no puede recuperar datos eliminados intencionalmente por el usuario, ni revertir comandos de eliminación (como rm -rf en sistemas Linux).</p>
+        <p><strong>e) Copias de Seguridad Externas:</strong> Se recomienda encarecidamente mantener copias de seguridad externas regularmente.</p>
+
+        <h3>15. Límites de Responsabilidad</h3>
+        <p><strong>a) Exención de Garantías:</strong> Los servicios se proporcionan "tal como están" y "según disponibilidad", sin garantías de ningún tipo, expresas o implícitas, incluyendo pero no limitado a:</p>
+        <ul>
+          <li>Idoneidad para un propósito específico</li>
+          <li>Ininterrupción del servicio</li>
+          <li>Ausencia de errores o defectos</li>
+          <li>Seguridad absoluta</li>
+          <li>Compatibilidad con software o hardware específico</li>
+        </ul>
+        <p><strong>b) Responsabilidad Limitada:</strong> Dentro de los límites permitidos por la ley, la responsabilidad total de AslanHost no excederá el importe pagado por el usuario por el servicio específico durante el periodo en que ocurrió el problema.</p>
+        <p><strong>c) Daños Directos e Indirectos:</strong> AslanHost no será responsable por:</p>
+        <ul>
+          <li>Pérdidas de ganancias o ingresos</li>
+          <li>Pérdidas de oportunidades de negocio</li>
+          <li>Daños indirectos, incidentales, especiales o consecuentes</li>
+          <li>Pérdida de datos o información</li>
+          <li>Daños a la reputación del usuario</li>
+          <li>Costos de recuperación de datos</li>
+          <li>Requerimientos de terceros</li>
+        </ul>
+        <p><strong>d) Eventos de Fuerza Mayor:</strong> AslanHost no será responsable por fallas o interrupciones causadas por eventos fuera de su control razonable, incluyendo pero no limitado a:</p>
+        <ul>
+          <li>Desastres naturales</li>
+          <li>Guerras o conflictos armados</li>
+          <li>Actos de terrorismo</li>
+          <li>Fallos de proveedores externos</li>
+          <li>Problemas de infraestructura pública (internet, electricidad)</li>
+          <li>Acciones gubernamentales</li>
+        </ul>
+        <p><strong>e) Dependencia de Terceros:</strong> AslanHost depende de proveedores externos para parte de su infraestructura. No nos hacemos responsables por problemas causados por fallas de estos proveedores.</p>
+
+        <h3>16. Propiedad Intelectual y Licencias</h3>
+        <p><strong>a) Propiedad de AslanHost:</strong> Todos los derechos de propiedad intelectual sobre:</p>
+        <ul>
+          <li>La plataforma</li>
+          <li>Software</li>
+          <li>Código fuente</li>
+          <li>Diseños</li>
+          <li>Logos</li>
+          <li>Marcas</li>
+          <li>Contenido de AslanHost</li>
+        </ul>
+        <p>Son propiedad exclusiva de AslanHost.</p>
+        <p><strong>b) Licencia de Uso:</strong> Al contratar nuestros servicios, recibes una licencia:</p>
+        <ul>
+          <li>Limitada</li>
+          <li>No exclusiva</li>
+          <li>No transferible</li>
+        </ul>
+        <p>Para utilizar la plataforma y software de AslanHost únicamente para los fines previstos.</p>
+        <p><strong>c) Propiedad del Contenido del Usuario:</strong> El usuario mantiene la propiedad de todo el contenido que aloje en nuestros servicios. Sin embargo, el usuario otorga a AslanHost una licencia mundial, no exclusiva para:</p>
+        <ul>
+          <li>Almacenar, procesar y transmitir dicho contenido</li>
+          <li>Realizar copias de seguridad del contenido</li>
+          <li>Cumplir con obligaciones legales</li>
+        </ul>
+        <p><strong>d) Software de Terceros:</strong> Algunos servicios pueden incluir software de terceros con sus propias licencias. El usuario debe respetar los términos de licencia de dichos programas.</p>
+        <p><strong>e) Modificaciones:</strong> No se permite:</p>
+        <ul>
+          <li>Modificar el software de AslanHost</li>
+          <li>Descompilarlo</li>
+          <li>Realizar ingeniería inversa</li>
+          <li>Crear trabajos derivados</li>
+        </ul>
+        <p>Sin autorización escrita.</p>
+
+        <h3>17. Protección de Datos y Privacidad</h3>
+        <p><strong>a) Recopilación de Datos:</strong> AslanHost recopila y procesa datos personales de los usuarios para:</p>
+        <ul>
+          <li>Prestar los servicios contratados</li>
+          <li>Procesar pagos</li>
+          <li>Mejorar la experiencia del usuario</li>
+        </ul>
+        <p><strong>b) Base Legal:</strong> El tratamiento de datos se realiza bajo las bases legales establecidas en la legislación Panama sobre protección de datos personales.</p>
+        <p><strong>c) Uso de Datos:</strong> Los datos del usuario pueden ser utilizados para:</p>
+        <ul>
+          <li>Provisión de servicios contratados</li>
+          <li>Procesamiento de pagos y facturación</li>
+          <li>Comunicación sobre el servicio</li>
+          <li>Mejora de nuestros servicios</li>
+          <li>Cumplimiento de obligaciones legales</li>
+        </ul>
+        <p><strong>d) Compartición de Datos:</strong> AslanHost no venderá datos personales de los usuarios. Los datos pueden compartirse con:</p>
+        <ul>
+          <li>Proveedores de servicios necesarios para la operación (centros de datos, procesadores de pago)</li>
+          <li>Autoridades competentes cuando sea requerido por ley</li>
+          <li>Terceros cuando haya consentimiento explícito del usuario</li>
+        </ul>
+        <p><strong>e) Seguridad de Datos:</strong> Implementamos medidas de seguridad razonables para proteger los datos, pero no podemos garantizar una seguridad absoluta. La transmisión de datos por internet conlleva riesgos inherentes que el usuario reconoce y acepta.</p>
+        <p><strong>f) Derechos del Usuario:</strong> El usuario tiene derecho a:</p>
+        <ul>
+          <li>Acceder a sus datos personales</li>
+          <li>Rectificarlos</li>
+          <li>Suprimirlos</li>
+          <li>Oponerse al tratamiento de sus datos personales</li>
+        </ul>
+        <p>Para ejercer estos derechos, debe contactar a través de los canales de soporte.</p>
+        <p><strong>g) Cookies:</strong> Utilizamos cookies y tecnologías similares para mejorar la experiencia del usuario. Puedes configurar tu navegador para rechazar cookies, aunque esto puede afectar la funcionalidad del sitio.</p>
+        <p><strong>h) Conservación de Datos:</strong> Los datos personales se conservarán mientras exista la relación contractual y, posteriormente, durante el tiempo necesario para cumplir con obligaciones legales y fiscales.</p>
+
+        <h3>18. Soporte Técnico</h3>
+        <p><strong>a) Disponibilidad:</strong> AslanHost ofrece soporte técnico a través del sistema de tickets disponible en la plataforma.</p>
+        <p><strong>b) Horarios de Respuesta:</strong> Los tiempos de respuesta varían según la categoría del problema y pueden oscilar entre:</p>
+        <ul>
+          <li>Pocas horas</li>
+          <li>Hasta 48 horas</li>
+        </ul>
+        <p>No garantizamos tiempos de respuesta inmediatos.</p>
+        <p><strong>c) Alcance del Soporte:</strong> Nuestro soporte técnico cubre:</p>
+        <ul>
+          <li>Problemas de conectividad a los servidores</li>
+          <li>Errores en la infraestructura de AslanHost</li>
+          <li>Asistencia básica con el panel de control</li>
+          <li>Diagnóstico de problemas técnicos relacionados con nuestros servicios</li>
+        </ul>
+        <p><strong>d) Exclusiones del Soporte:</strong> El soporte técnico NO incluye:</p>
+        <ul>
+          <li>Configuración detallada de software o aplicaciones</li>
+          <li>Programación personalizada</li>
+          <li>Instalación de mods, plugins o software de terceros</li>
+          <li>Configuración de dominios, DNS o SSL (salvo en servicios específicos)</li>
+          <li>Asesoramiento sobre administración de servidores</li>
+          <li>Recuperación de datos por errores del usuario</li>
+        </ul>
+        <p><strong>e) Idioma:</strong> El soporte se proporciona principalmente en español e inglés.</p>
+        <p><strong>f) Abuso del Sistema:</strong> El uso abusivo del sistema de soporte puede resultar en suspensiones temporales del acceso al mismo.</p>
+
+        <h3>19. Jurisdicción y Legislación Aplicable</h3>
+        <p><strong>a) Legislación Aplicable:</strong> Estos Términos y Condiciones se rigen por las leyes de la República del Perú.</p>
+        <p><strong>b) Jurisdicción:</strong> Para cualquier controversia derivada de o relacionada con estos términos y el uso de los servicios, las partes se someten a:</p>
+        <ul>
+          <li>La jurisdicción de los tribunales competentes de Lima, Perú</li>
+          <li>Renunciando a cualquier otro fuero que pudiera corresponderles por razón de sus domicilios presentes o futuros</li>
+        </ul>
+        <p><strong>c) Ubicación de Servidores:</strong> El contrato jurídico se rige por:</p>
+        <ul>
+          <li>La ley Panama</li>
+          <li>Conforme a la ubicación del proveedor del servicio</li>
+        </ul>
+        <p><strong>d) Resolución de Controversias:</strong> En caso de cualquier discrepancia, el usuario se compromete a agotar:</p>
+        <ul>
+          <li>Los mecanismos internos de solución de disputas de AslanHost (soporte, facturación)</li>
+          <li>Antes de emprender acciones legales</li>
+        </ul>
+        <p><strong>e) Interpretación:</strong> Cualquier duda o controversia sobre la interpretación de estos términos será resuelta por los tribunales Panamá de conformidad con la legislación Panama.</p>
+
+        <h3>20. Modificaciones del Contrato</h3>
+        <p>AslanHost se reserva el derecho de modificar, agregar o eliminar cualquier parte de estos Términos y Condiciones en cualquier momento y sin previo aviso.</p>
+        <p><strong>a) Notificación de Cambios:</strong> Los cambios se publicarán en el sitio web oficial de AslanHost. En casos de cambios sustanciales, AslanHost se esforzará por notificar a los usuarios a través de los canales de comunicación disponibles.</p>
+        <p><strong>b) Entrada en Vigor:</strong> Las modificaciones entrarán en vigor automáticamente desde su publicación en el sitio web.</p>
+        <p><strong>c) Aceptación Continuada:</strong> El uso continuado de los servicios después de la publicación de los cambios constituirá aceptación de los nuevos términos modificados.</p>
+        <p><strong>d) Derecho de Oposición:</strong> Si el usuario no está de acuerdo con las modificaciones, debe:</p>
+        <ol>
+          <li>Cesar el uso de los servicios inmediatamente</li>
+          <li>Cancelar cualquier servicio activo</li>
+          <li>Solicitar la eliminación de su cuenta</li>
+        </ol>
+        <p><strong>e) Versión Vigente:</strong> La versión más reciente de estos términos, publicada en el sitio web de AslanHost, será la única válida y aplicable.</p>
+
+        <h3>21. Consentimiento del Cliente</h3>
+        <p>Al utilizar los servicios de AslanHost, el cliente declara y garantiza que:</p>
+        <p><strong>Tu Compromiso:</strong></p>
+        <ul>
+          <li>Ha leído, entendido y acepta estos Términos y Condiciones</li>
+          <li>Tiene la capacidad legal para contratar estos servicios</li>
+          <li>Proporcionará información veraz y actualizada</li>
+          <li>Utilizará los servicios de manera legal y responsable</li>
+          <li>Acepta la ubicación de la infraestructura de servidores</li>
+          <li>Comprende que los servicios se proporcionan "tal como están"</li>
+          <li>Reconoce que AslanHost es una persona natural con negocio registrado en Perú</li>
+          <li>Acepta la jurisdicción de los tribunales de Panama para cualquier controversia</li>
+          <li>Ha leído y acepta la Política de Privacidad de AslanHost</li>
+          <li>Entiende que las solicitudes de reembolso están limitadas a casos específicos</li>
+        </ul>
+        <p>Este documento constituye el acuerdo completo entre el usuario y AslanHost, reemplazando cualquier acuerdo previo, oral o escrito.</p>
+
+        <h3>22. Cláusulas Generales</h3>
+        <p><strong>a) Separabilidad:</strong> Si cualquier cláusula de estos términos es declarada inválida o inaplicable por un tribunal competente, las cláusulas restantes mantendrán su plena validez y efecto.</p>
+        <p><strong>b) Renuncia:</strong> El hecho de que AslanHost no haga valer algún derecho o cláusula no constituirá una renuncia al mismo.</p>
+        <p><strong>c) Cesión:</strong> El usuario no puede ceder sus derechos u obligaciones bajo este contrato sin el consentimiento previo y por escrito de AslanHost.</p>
+        <p><strong>d) Acuerdo Completo:</strong> Estos términos constituyen el acuerdo completo entre las partes respecto al tema tratado, reemplazando todos los acuerdos previos o contemporáneos.</p>
+        <p><strong>e) Títulos y Encabezados:</strong> Los títulos y encabezados de las secciones son solo para referencia y no afectan la interpretación del contenido.</p>
+        <p><strong>f) Idioma:</strong> Estos términos se proporcionan en español. En caso de discrepancia entre versiones en diferentes idiomas, prevalecerá la versión en español.</p>
+        <p><strong>g) Contacto:</strong> Para cualquier consulta sobre estos términos, contáctanos a través de los canales de soporte disponibles en nuestra plataforma.</p>
+
+        <h3>23. Aviso Importante</h3>
+        <p><strong>Consecuencias del Incumplimiento:</strong> El incumplimiento de cualquiera de estos Términos y Condiciones puede resultar en:</p>
+        <ul>
+          <li>La suspensión inmediata o terminación definitiva de tu cuenta</li>
+          <li>La terminación de todos los servicios asociados</li>
+          <li>Sin derecho a reembolso de ninguna naturaleza</li>
+        </ul>
+        <p><strong>Modificaciones:</strong> AslanHost se reserva el derecho de modificar estos términos en cualquier momento. El uso continuado de los servicios implica la aceptación de dichas modificaciones.</p>
+        <p><strong>Antes de Usar el Servicio:</strong> En caso de dudas sobre la interpretación o alcance de estos términos, te recomendamos contactarnos ANTES de utilizar nuestros servicios.</p>
+        <p><strong>Asesoramiento Legal:</strong> Si necesitas aclaraciones legales adicionales, consulta con un abogado independiente. Este documento proporciona información general y no constituye asesoramiento legal personalizado.</p>
+
+        <hr style="border:none;border-top:1px solid rgba(255,255,255,0.1);margin:20px 0;">
+        <p><strong>© 2026 AslanHost. Todos los derechos reservados.</strong></p>
+      </div>
+
+      <footer class="copy">AslanHost · <span class="muted">Protegido por Términos y Condiciones</span></footer>
+    </div>
+  </div>
+</body>
+</html>
