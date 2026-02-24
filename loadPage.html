@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading...</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            background: var(--background-color);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+        }
+
+        img {
+            max-width: 350px;
+            width: 90vw;
+            box-shadow: 0 0 48px 8px var(--primary-color), 0 0 0 8px var(--background-secondary);
+            border-radius: 2rem;
+            background: var(--background-secondary);
+            padding: 1.5rem;
+            transition: box-shadow 0.3s;
+        }
+
+        img:hover {
+            box-shadow: 0 0 64px 16px var(--secondary-color), 0 0 0 8px var(--background-secondary);
+        }
+    </style>
+</head>
+
+<body>
+    <img src="img/server3.png" alt="Cargando...">
+</body>
+
+</html>

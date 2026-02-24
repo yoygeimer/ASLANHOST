@@ -1,284 +1,207 @@
-<!doctype html>
-<html lang="es">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>AslanHost - Demo</title>
-  <link href="https://i.postimg.cc/tgLHK8qH/image-(18).png" rel="stylesheet">
-  <style>
-    :root{
-      --bg1:#2b0b4a;
-      --bg2:#4a2fb8;
-      --accent:#3fe0ff;
-      --glass: rgba(255,255,255,0.06);
-    }
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family:"Poppins",system-ui,Segoe UI,Roboto,Arial;
-      background: radial-gradient(ellipse at 10% 10%, rgba(255,255,255,0.03), transparent 10%),
-                  radial-gradient(ellipse at 90% 90%, rgba(255,255,255,0.02), transparent 10%),
-                  linear-gradient(120deg,var(--bg1),var(--bg2));
-      color:#eaf6ff;
-      -webkit-font-smoothing:antialiased;
-      min-height:100vh;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      padding:40px;
-    }
-
-    .card{
-      width:1100px;
-      max-width:95%;
-      background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
-      border-radius:14px;
-      overflow:hidden;
-      display:flex;
-      box-shadow:0 10px 40px rgba(3,3,10,0.6);
-      position:relative;
-    }
-
-    /* Left hero image with hex/diagonal cut */
-    .hero-left{
-      width:48%;
-      min-height:360px;
-      background: linear-gradient(180deg,#8e6edc,#b07aff);
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      position:relative;
-      padding:30px;
-      clip-path: polygon(0 0, 75% 0, 100% 50%, 75% 100%, 0 100%, 15% 50%); /* stylized hex */
-    }
-    .hero-left .logo{
-      max-width:300px;
-      filter:drop-shadow(0 6px 20px rgba(0,0,0,0.6));
-    }
-
-    .hero-right{
-      width:52%;
-      padding:46px 48px;
-      display:flex;
-      flex-direction:column;
-      justify-content:center;
-      gap:18px;
-      position:relative;
-    }
-
-    h1{
-      margin:0;
-      font-size:28px;
-      line-height:1.12;
-      color:#fff;
-      text-shadow:0 6px 18px rgba(50,10,80,0.6);
-    }
-    h1 .highlight{ color: var(--accent); font-weight:700 }
-
-    p.lead{
-      margin:6px 0 0;
-      color:rgba(234,246,255,0.9);
-      opacity:0.95;
-      font-size:15px;
-      max-width:720px;
-    }
-
-    .features{
-      margin-top:18px;
-      display:flex;
-      gap:12px;
-      align-items:center;
-      flex-wrap:wrap;
-    }
-    .pill{
-      background:var(--glass);
-      padding:8px 12px;
-      border-radius:999px;
-      font-weight:600;
-      color:var(--accent);
-      font-size:13px;
-      backdrop-filter: blur(6px);
-      border:1px solid rgba(255,255,255,0.04);
-    }
-
-    .cta-row{
-      margin-top:22px;
-      display:flex;
-      gap:12px;
-      align-items:center;
-    }
-    .btn{
-      padding:12px 18px;
-      border-radius:10px;
-      border:0;
-      cursor:pointer;
-      font-weight:700;
-    }
-    .btn-primary{
-      background: linear-gradient(90deg,#00e5ff,#3aa0ff);
-      color:#031026;
-      box-shadow:0 8px 24px rgba(58,160,255,0.18);
-    }
-    .btn-secondary{
-      background:transparent;
-      color:#ccecff;
-      border:1px solid rgba(255,255,255,0.06);
-    }
-
-    /* small logo and socials on right bottom */
-    .brand-right{
-      position:absolute;
-      right:18px;
-      bottom:18px;
-      display:flex;
-      flex-direction:column;
-      align-items:center;
-      gap:8px;
-      color:#dff7ff;
-      padding:6px 10px;
-      background: linear-gradient(180deg, rgba(255,255,255,0.01), transparent);
-      border-radius:8px;
-    }
-    .brand-right img{ width:62px; height:auto; filter:drop-shadow(0 6px 18px rgba(0,0,0,0.6)) }
-    
-    .brand-right a{ display:inline-flex; align-items:center; justify-content:center; gap:10px; color:var(--accent); text-decoration:none; padding:6px; border-radius:6px; transition:all 0.2s ease }
-    .brand-right a:hover{ background:rgba(63,224,255,0.1) }
-    .brand-right svg{ width:24px; height:24px; display:block; color:inherit; }
-    .socials{ display:flex; gap:12px; align-items:center }
-    .brand-right .contact-label{ color:var(--accent); font-weight:800; font-size:15px; margin:0; padding-bottom:4px; text-align:center }
-    
-    .socials .social-btn{
-      position:absolute;
-      inset:0;
-      background-image:
-        radial-gradient(2px 2px at 10% 20%, rgba(255,255,255,0.6), transparent),
-        radial-gradient(1.5px 1.5px at 50% 10%, rgba(255,255,255,0.45), transparent),
-        radial-gradient(1px 1px at 80% 70%, rgba(255,255,255,0.35), transparent);
-      opacity:0.65;
-      mix-blend-mode:screen;
-    }
-    @media (max-width:880px){
-      .card{flex-direction:column; align-items:stretch}
-      .hero-left{width:100%; clip-path:none; border-bottom:1px solid rgba(255,255,255,0.03)}
-      .hero-right{width:100%; padding:30px 24px}
-      .brand-right{position:relative; margin-top:20px; right:auto; bottom:auto; padding:12px 0; background:transparent; justify-content:center}
-      h1{font-size:22px}
-      p.lead{font-size:14px}
-      .cta-row{flex-direction:column; gap:8px}
-      .btn{width:100%}
-      .pill{font-size:12px; padding:6px 10px}
-      .brand-right .contact-label{font-size:13px; padding-bottom:6px}
-      .brand-right svg{width:20px; height:20px}
-    }
-    @media (max-width:480px){
-      body{padding:20px}
-      .card{border-radius:10px}
-      .hero-right{padding:20px 16px}
-      h1{font-size:18px; line-height:1.2}
-      p.lead{font-size:13px}
-      .features{gap:8px}
-      .pill{font-size:11px; padding:5px 8px}
-      .btn{padding:10px 14px; font-size:13px}
-      .brand-right{gap:6px; padding:8px 0}
-      .brand-right .contact-label{font-size:12px; padding-bottom:4px}
-      .socials{gap:10px}
-      .brand-right svg{width:18px; height:18px}
-      .terms a{font-size:12px}
-    }
-
-    .footer-section{
-      margin-top:40px;
-      padding:24px;
-      background:rgba(255,255,255,0.02);
-      border-top:1px solid rgba(255,255,255,0.06);
-      text-align:center;
-      border-radius:10px;
-    }
-
-    .footer-section h3{
-      margin:0 0 12px;
-      font-size:16px;
-      color:var(--accent);
-      font-weight:600;
-    }
-
-    .footer-section p{
-      margin:0 0 16px;
-      font-size:13px;
-      color:rgba(234,246,255,0.8);
-      line-height:1.6;
-      max-width:600px;
-      margin-left:auto;
-      margin-right:auto;
-    }
-
-    .footer-section a{
-      color:var(--accent);
-      text-decoration:none;
-      font-weight:600;
-      transition:all 0.3s ease;
-      border-bottom:1px solid var(--accent);
-    }
-
-    .footer-section a:hover{
-      opacity:0.8;
-    }
-    .terms{ margin-top: 20px; display:flex; justify-content:center; align-items:center; width:100%; }
-    .terms a{ display:inline-block; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Aslan Host</title>
 </head>
 <body>
-  <div class="card" role="main">
-    <div class="hero-left">
-      <!-- Reemplaza 'images/lion.png' por tu logo/lion -->
-      <img src="https://i.postimg.cc/jdbKMV2b/9e6cc93f-3af1-4528-baa0-8a0c3e4fcaf8-removalai-preview.png" alt="Aslan" class="logo">
-    </div>
-
-    <div class="hero-right">
-      <h1>¿Quieres crear un servidor con tus amigos para <span class="highlight">Minecraft</span>, <span class="highlight">Hytale</span>, <span class="highlight">GTA</span> u otros juegos?</h1>
-      <p class="lead">Aquí te traemos la <strong>solución ideal:</strong> el mejor hosting pensado especialmente para ti, <span style="color:var(--accent);font-weight:700">rápido, seguro y listo</span> para que disfrutes sin complicaciones.</p>
-
-      <div class="features">
-        <div class="pill">Instalación rápida</div>
-        <div class="pill">Soporte 24/7</div>
-        <div class="pill">Backups automáticos</div>
-      </div>
-
-      <div class="cta-row">
-        <button class="btn btn-primary" type="button" onclick="location.href='https://billing.aslanhost.com/dashboard'">Área de Cliente</button>
-        <button class="btn btn-secondary" type="button" onclick="location.href='https://billing.aslanhost.com/'">Ver planes</button>
-      </div>
-
-      <div class="terms">
-        <a href="tos.html" style="color: var(--accent); text-decoration: none; font-size: 13px; font-weight: 600; cursor: pointer; transition: opacity 0.3s;" onmouseover="this.style.opacity='0.8'" onmouseout="this.style.opacity='1'">
-          Términos y Condiciones
-        </a>
-      </div>
-
-      <div class="brand-right" aria-hidden="false">
-          <div class="contact-label" aria-hidden="false">Contáctanos</div>
-          <div class="socials" aria-hidden="false">
-
-            <!-- iconos simples svg -->
-            <a href="https://www.facebook.com/aslanhosting" target="_blank" aria-label="facebook">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22 12.07C22 6.5 17.52 2 12 2S2 6.5 2 12.07C2 17.09 5.65 21.29 10.44 22v-7.02H7.9v-2.9h2.54V9.41c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.23.2 2.23.2v2.45h-1.25c-1.23 0-1.62.77-1.62 1.56v1.87h2.77l-.44 2.9h-2.33V22C18.35 21.29 22 17.09 22 12.07z" fill="currentColor"/></svg>
-            </a>
-            <a href="https://www.instagram.com/aslanhosting" target="_blank" aria-label="instagram">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm5 6.1A4.9 4.9 0 1 0 16.9 13 4.9 4.9 0 0 0 12 8.1zm6.2-.8a1.2 1.2 0 1 1-1.2-1.2 1.2 1.2 0 0 1 1.2 1.2z" fill="currentColor"/></svg>
-            </a>
-            <a href="https://www.tiktok.com/@aslanhost4" target="_blank" aria-label="tik tok">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.68v16.56a2.4 2.4 0 1 1-2.4-2.4c.34 0 .67.03 1 .09V9.5a6.5 6.5 0 0 0-1-.08c-3.63 0-6.59 2.86-6.59 6.44s2.96 6.44 6.59 6.44 6.59-2.86 6.59-6.44v-5.02a8.34 8.34 0 0 0 5.125 1.74v-3.67a4.49 4.49 0 0 1-.595-.05z" fill="currentColor"/></svg>
-            </a>
-            <a href="https://discord.gg/AWgWVKHHt" target="_blank" aria-label="Discord">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.211.375-.445.864-.607 1.25a18.27 18.27 0 0 0-5.487 0c-.162-.386-.396-.875-.607-1.25a.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.056 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.873-1.295 1.226-1.994a.076.076 0 0 0-.042-.106c-.657-.248-1.282-.561-1.885-.922a.077.077 0 0 1-.008-.128c.126-.094.253-.194.375-.287a.075.075 0 0 1 .078-.01c3.928 1.793 8.18 1.793 12.062 0a.075.075 0 0 1 .079.009c.122.093.25.193.375.288a.077.077 0 0 1-.006.127c-.603.36-1.228.674-1.884.922a.077.077 0 0 0-.041.107c.354.699.765 1.364 1.226 1.994a.076.076 0 0 0 .084.028 19.86 19.86 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-4.467.151-8.35-2.122-11.638a.06.06 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-.965-2.157-2.156 0-1.193.964-2.157 2.157-2.157 1.193 0 2.156.964 2.156 2.157 0 1.19-.963 2.156-2.156 2.156zm7.975 0c-1.183 0-2.157-.965-2.157-2.156 0-1.193.964-2.157 2.157-2.157 1.193 0 2.156.964 2.156 2.157 0 1.19-.963 2.156-2.156 2.156z" fill="currentColor"/></svg>
-            </a>
-          </div>
+    <header>
+        <div class="brand">
+            <img src="https://i.postimg.cc/jdbKMV2b/9e6cc93f-3af1-4528-baa0-8a0c3e4fcaf8-removalai-preview.png" alt="Aslan Host">
+            Aslan Host
         </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="stars" aria-hidden="true"></div>
-  </div>
+    </header>
+    <main>
+        <section class="hero" id="home">
+            <img src="img/server4.png" alt="Aslan Host Server">
+            <h1>Hosting de alto rendimiento</h1>
+            <p>El mejor hosting pensado especialmente para ti, rapido, seguro y economico.</p>
+            <a href="#services" class="btn-outline">Leer mas</a>
+            <a href="https://billing.aslanhost.com/login" class="btn">Comenzar</a>
+        </section>
+        <section class="section services" id="services">
+            <h2>Productos</h2>
+            <img src="img/server5.png" alt="Aslan Host Services">
+            <div class="products">
+                <article class="card">
+                    <a href="https://billing.aslanhost.com/products/game-hosting">
+                    <svg viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                        fill="none" width="32" height="32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <polyline points="14.5 17.5 3 6 3 3 6 3 17.5 14.5" />
+                        <line x1="13" x2="19" y1="19" y2="13" />
+                        <line x1="16" x2="20" y1="16" y2="20" />
+                        <line x1="19" x2="21" y1="21" y2="19" />
+                    </svg>
+                    <h3>Servidores de Juegos</h3>
+                    <p>Crea, personaliza y escala tu servidor de juegos con total libertad en Aslan Host te ofrecemos servidores rapidos, seguros y optimizados para que tu comunidad crezca sin lag y con la mejor experiencia de juego.</p></a>
+                </article>
+                <article class="card">
+                    <a href="#">
+                    <svg viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                        fill="none" width="32" height="32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9z" />
+                    </svg>
+                    <h3>Cloud VPS</h3>
+                    <p>Proximamente...</p></a>
+                </article>
+                <article class="card">
+                    <a href="#">
+                    <svg viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                        fill="none" width="32" height="32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <path
+                            d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-0.67-0.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" />
+                    </svg>
+                    <h3>Dedicated Server</h3>
+                    <p>Proximamente...</p></a>
+                </article>
+            </div>
+        </section>
+        <section class="section server" id="server">
+            <img src="img/panel/panel1.png" alt="" class="server-img">
+            <img src="img/panel/panel2.png" alt="" class="server-img">
+            <img src="img/panel/panel3.png" alt="" class="server-img">
+            <img src="img/panel/panel4.png" alt="" class="server-img">
+            <img src="img/panel/panel5.png" alt="" class="server-img">
+        </section>
+        <section class="section about" id="about">
+            <h2>Aslan Host</h2>
+            <h3 class="text-center">Únete a nuestra comunidad</h3>
+            <div class="discord">
+                <div>
+                    <svg viewBox="0 0 32 32" fill="currentColor" width="32" height="32" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <path
+                            d="M25.7 7.1C23.9 6.3 22 5.7 20 5.3c0 0-0.1 0-0.1 0-0.2 0.4-0.5 1-0.7 1.5-2.2-0.3-4.3-0.3-6.4 0-0.2-0.5-0.5-1-0.7-1.5 0 0-0.1 0-0.1 0-2 0.3-3.9 0.9-5.7 1.8 0 0 0 0 0 0C2.7 12.5 1.7 17.8 2.2 23c0 0 0 0.1 0 0.1 2.4 1.8 4.7 2.8 7 3.5 0 0 0.1 0 0.1 0 0.5-0.7 1-1.5 1.4-2.3 0 0 0-0.1 0-0.1-0.8-0.3-1.5-0.6-2.2-1-0.1 0-0.1-0.1 0-0.1 0.1-0.1 0.3-0.2 0.4-0.3 0 0 0.1 0 0.1 0 4.6 2.1 9.5 2.1 14.1 0 0 0 0.1 0 0.1 0 0.1 0.1 0.3 0.2 0.4 0.3 0.1 0 0 0.1 0 0.1-0.7 0.4-1.4 0.8-2.2 1 0 0-0.1 0.1 0 0.1 0.4 0.8 0.9 1.6 1.4 2.3 0 0 0.1 0 0.1 0 2.3-0.7 4.6-1.8 7-3.5 0 0 0 0 0-0.1 0.6-6-1-11.2-4.2-15.9 0 0 0 0 0 0zM11.4 19.9c-1.4 0-2.5-1.3-2.5-2.8s1.1-2.8 2.5-2.8 2.5 1.3 2.5 2.8-1.1 2.8-2.5 2.8zM20.7 19.9c-1.4 0-2.5-1.3-2.5-2.8s1.1-2.8 2.5-2.8 2.5 1.3 2.5 2.8-1.1 2.8-2.5 2.8z" />
+                    </svg>
+                    <p><span>•</span> +500 miembros activos</p>
+                </div>
+                <a href="https://discord.gg/K9K5JhEax" class="btn-outline">
+                    Unirse
+                </a>
+            </div>
+            <h2>Preguntas frecuentes</h2>
+            <div class="products">
+                <article class="card">
+                    <svg viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                        fill="none" width="32" height="32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-0.5 5-2c0.71-0.84 0.7-2.13-0.09-2.91A2.18 2.18 0 0 0 4.5 16.5z" />
+                        <path d="M12 15 9 12a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-0.78 7.5-6 11a22.35 22.35 0 0 1-4 2z" />
+                        <path d="M9 12H4c0 0 0.55-3.03 2-4 1.62-1.08 5 0 5 0" />
+                        <path d="M12 15v5c0 0 3.03-0.55 4-2 1.08-1.62 0-5 0-5" />
+                    </svg>
+                    <h3>¿Cuanto tarda en activarse mi servidor?</h3>
+                    <p>Tu servidor se activa de forma <span>instantanea</span> despues del pago. Resiviras los datos de acceso por e-mail y podras comenzar a usarlo inmediatamente.</p>
+                </article>
+                <article class="card">
+                    <svg viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                        fill="none" width="32" height="32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <rect width="20" height="14" rx="2" x="2" y="5" />
+                        <line x1="2" x2="22" y1="10" y2="10" />
+                    </svg>
+                    <h3>¿Que metodos de pago aceptamos?</h3>
+                    <p>Paypal, Tajeta Credito/Debito, Puntos, Cryptomonedas y Pagos locales de varios paises.</p>
+                </article>
+                <article class="card">
+                    <svg viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                        fill="none" width="32" height="32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <path d="M17 2l4 4-4 4" />
+                        <path d="M3 11v-1a4 4 0 0 1 4-4h14" />
+                        <path d="M7 22 3 18l4-4" />
+                        <path d="M21 13v1a4 4 0 0 1-4 4H3" />
+                    </svg>
+                    <h3>¿Puedo cambiar de plan despues?</h3>
+                    <p>Si puedes mejorar o reducir tu plan en cualquier momento, sin perder los datos, atravez de Discord o Whatsapp comunicandote con soporte.</p>
+                </article>
+                <article class="card">
+                    <h3></h3>
+                    <p></p>
+                </article>
+                <article class="card">
+                    <h3></h3>
+                    <p></p>
+                </article>
+                <article class="card">
+                    <h3></h3>
+                    <p></p>
+                </article>
+            </div>
+            <!-- <div class="info-about">
+                <article>
+                    <h3>Algun titulo 3</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi voluptatum impedit harum facere qui totam porro explicabo soluta cupiditate expedita sint doloremque magnam, animi vitae voluptatibus quia provident nobis distinctio?</p>
+                </article>
+                <article>
+                    <h3>Algun titulo 3</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi voluptatum impedit harum facere qui totam porro explicabo soluta cupiditate expedita sint doloremque magnam, animi vitae voluptatibus quia provident nobis distinctio?</p>
+                </article>
+                <article>
+                    <ul>
+                        <li>Algo 1</li>
+                        <li>Algo 2</li>
+                        <li>Algo 3</li>
+                    </ul>
+                    <a href="#" class="btn">Learn More</a>
+                </article>
+            </div> -->
+            <!-- <a href="#" class="btn">Get services</a> -->
+        </section>
+    </main>
+    <footer class="footer" id="footer">
+        <article class="socials">
+            <a href="https://www.facebook.com/profile.php?id=61588645321761" class="socials-aslan">
+                <svg viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                    fill="none" width="32" height="32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                </svg>
+                Aslan Host Facebook
+            </a>
+            <a href="https://www.instagram.com/aslanhostt/" class="socials-aslan">
+                <svg viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                    fill="none" width="32" height="32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <rect width="20" height="20" rx="5" ry="5" x="2" y="2" />
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                    <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+                </svg>
+                @aslanhostt
+            </a>
+            <a href="#" class="socials-aslan">
+                <svg viewBox="0 0 32 32" fill="currentColor" width="32" height="32" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <path
+                        d="M18.2342 14.1624 26.9766 4h-2.0717l-7.591 8.8238L11.251 4H4.2581l9.1684 13.3432L4.2581 28h2.0718l8.0163-9.3183L20.7491 28h6.9929l-9.5083-13.8376zM15.3966 17.4608l-0.9289-1.3287L7.0763 5.5596h3.1822l5.9649 8.5323 0.9289 1.3287 7.7536 11.0907h-3.1822l-6.3272-9.05z" />
+                </svg>
+                Proximamente...
+            </a>
+            <a href="https://www.tiktok.com/@aslanhost4" class="socials-aslan">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="32" height="32" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <path
+                        d="M12.525 0.02c1.31-0.02 2.61-0.01 3.91-0.02 0.08 1.53 0.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-0.05-2.89-0.35-4.2-0.97-0.57-0.26-1.1-0.59-1.62-0.93-0.01 2.92 0.01 5.84-0.02 8.75-0.08 1.4-0.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43 0.08-2.86-0.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-0.02-0.5-0.03-1-0.01-1.49 0.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72 0.02 1.48-0.04 2.96-0.04 4.44-0.99-0.32-2.15-0.23-3.02 0.37-0.63 0.41-1.11 1.04-1.36 1.75-0.21 0.51-0.15 1.07-0.14 1.61 0.24 1.64 1.82 3.02 3.5 2.87 1.12-0.01 2.19-0.66 2.77-1.61 0.19-0.33 0.4-0.67 0.41-1.06 0.1-1.79 0.06-3.57 0.07-5.36 0.01-4.03-0.01-8.05 0.02-12.07z" />
+                </svg>
+                @aslanhost4
+            </a>
+        </article>
+        <article class="socials">
+            <a href="https://discord.gg/K9K5JhEax" class="socials-aslan">
+                <svg viewBox="0 0 32 32" fill="currentColor" width="32" height="32" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <path
+                        d="M25.7 7.1C23.9 6.3 22 5.7 20 5.3c0 0-0.1 0-0.1 0-0.2 0.4-0.5 1-0.7 1.5-2.2-0.3-4.3-0.3-6.4 0-0.2-0.5-0.5-1-0.7-1.5 0 0-0.1 0-0.1 0-2 0.3-3.9 0.9-5.7 1.8 0 0 0 0 0 0C2.7 12.5 1.7 17.8 2.2 23c0 0 0 0.1 0 0.1 2.4 1.8 4.7 2.8 7 3.5 0 0 0.1 0 0.1 0 0.5-0.7 1-1.5 1.4-2.3 0 0 0-0.1 0-0.1-0.8-0.3-1.5-0.6-2.2-1-0.1 0-0.1-0.1 0-0.1 0.1-0.1 0.3-0.2 0.4-0.3 0 0 0.1 0 0.1 0 4.6 2.1 9.5 2.1 14.1 0 0 0 0.1 0 0.1 0 0.1 0.1 0.3 0.2 0.4 0.3 0.1 0 0 0.1 0 0.1-0.7 0.4-1.4 0.8-2.2 1 0 0-0.1 0.1 0 0.1 0.4 0.8 0.9 1.6 1.4 2.3 0 0 0.1 0 0.1 0 2.3-0.7 4.6-1.8 7-3.5 0 0 0 0 0-0.1 0.6-6-1-11.2-4.2-15.9 0 0 0 0 0 0zM11.4 19.9c-1.4 0-2.5-1.3-2.5-2.8s1.1-2.8 2.5-2.8 2.5 1.3 2.5 2.8-1.1 2.8-2.5 2.8zM20.7 19.9c-1.4 0-2.5-1.3-2.5-2.8s1.1-2.8 2.5-2.8 2.5 1.3 2.5 2.8-1.1 2.8-2.5 2.8z" />
+                </svg>
+                Aslan Host Discord
+            </a>
+            <a href="https://wa.me/50767192971?text=Hola%2C%20vengo%20de%20la%20web%20de%20AslanHost%20quisiera%20m%C3%A1s%20informaci%C3%B3n%20o%20un%20c%C3%B3digo%20de%20descuento" class="socials-aslan">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="32" height="32" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <path
+                        d="M17.472 14.382c-0.297-0.149-1.758-0.867-2.03-0.967-0.273-0.099-0.471-0.148-0.67 0.15-0.197 0.297-0.767 0.966-0.94 1.164-0.173 0.199-0.347 0.223-0.644 0.075-0.297-0.15-1.255-0.463-2.39-1.475-0.883-0.788-1.48-1.761-1.653-2.059-0.173-0.297-0.018-0.458 0.13-0.606 0.134-0.133 0.298-0.347 0.446-0.52 0.149-0.174 0.198-0.298 0.298-0.497 0.099-0.198 0.05-0.371-0.025-0.52S9.325 7.515 9.078 6.92c-0.242-0.579-0.487-0.5-0.669-0.51-0.173-8e-3-0.371-0.01-0.57-0.01-0.198 0-0.52 0.074-0.792 0.372-0.272 0.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074 0.149 0.198 2.096 3.2 5.077 4.487 0.709 0.306 1.262 0.489 1.694 0.625 0.712 0.227 1.36 0.195 1.871 0.118 0.571-0.085 1.758-0.719 2.006-1.413s0.248-1.289 0.173-1.413c-0.074-0.124-0.272-0.198-0.57-0.347M12.05 21.785h-4e-3a9.87 9.87 0 0 1-5.031-1.378l-0.361-0.214-3.741 0.982 0.998-3.648-0.235-0.374a9.86 9.86 0 0 1-1.51-5.26c1e-3-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-3e-3 5.45-4.437 9.884-9.885 9.884M20.463 3.488A11.815 11.815 0 0 0 12.05 0C5.495 0 0.16 5.335 0.157 11.892c0 2.096 0.547 4.142 1.588 5.945L0.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h5e-3c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z" />
+                </svg>
+                Soporte Whatsapp
+            </a>
+        </article>
+    </footer>
 </body>
+<script src="js/main.js"></script>
 </html>
