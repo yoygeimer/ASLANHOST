@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/calculadora.css">
+    <title>Calculadora de Recursos</title>
+</head>
+
+<body>
+    <main class="container">
+        <h1>Calculadora</h1>
+        <h2>Calcular la Ram</h2>
+        <label for="juego">¿Qué servidor usarás?</label>
+        <select id="juego" name="juego">
+            <optgroup label="Servidores disponibles">
+                <option value="Bedrock">Bedrock</option>
+                <option value="Java">Java</option>
+                <option value="Hytale">Hytale</option>
+            </optgroup>
+        </select>
+        <label for="personas">¿Cuántas personas van a ingresar?</label>
+        <input type="text" id="personas" name="personas" placeholder="Ej: 8">
+        <button>Calcular</button>
+        <p id="ram-result">La cantidad de ram mínima recomendada para tu servidor es:</p>
+        <p id="complementos-result">La cantidad máxima de complementos recomendada para tu servidor es:</p>
+        <p id="atlas-result">Recomendación de Servidores Aslan:</p>
+    </main>
+    <script src="js/main1.js"></script>
+</body>
+
+</html>
